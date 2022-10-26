@@ -1,20 +1,14 @@
 package ru.mirea.lab1;
-import java.util.Scanner;
+        import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int[] numbers = new int[10];
-        int x = 0, y = 2147483647, i = 0, z = 0;
+        float x = 0;
         Scanner sc = new Scanner(System.in);
-        while(i < 10) {
+        for(int i = 0; i < 10; i++){
             numbers[i] = sc.nextInt();
-            if(x < numbers[i])
-                x = numbers[i];
-            if(y > numbers[i])
-                y = numbers[i];
-            z += numbers[i];
-            i++;
+            x += numbers[i];
         }
-        System.out.println(x);
-        System.out.println(y);
+        System.out.println(x / 10);
     }
 }
